@@ -5,13 +5,11 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
-# Grant permissions required for GitHub Actions to deploy to Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Prevent concurrent deployments from clashing
 concurrency:
   group: "pages"
   cancel-in-progress: true
